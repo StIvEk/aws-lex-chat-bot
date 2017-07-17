@@ -123,13 +123,13 @@
           params = {
             botAlias: '$LATEST',
             botName: document.getElementById('BOT').value,
-            contentType: 'audio/x-l16; sample-rate=16000',
+            contentType: 'audio/x-l16; sample-rate=16000; channel-count=1',
             userId: 'BlogPostTesting',
             accept: 'audio/mpeg'
           };
           lexruntime = new AWS.LexRuntime({
             region: 'us-east-1',
-            credentials: new AWS.Credentials(document.getElementById('ACCESS_ID').value, document.getElementById('SESSION_TOKEN').value, null)
+            credentials: new AWS.Credentials('xxxxxxxxxxx', 'zzzzzzzzzzzzzzzzzzzzzz', null)
           });
           conversation.advanceConversation();
         };
